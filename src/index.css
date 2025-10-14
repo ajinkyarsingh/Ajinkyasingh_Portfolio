@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark AI-themed portfolio colors */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 271 81% 66%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 271 81% 66%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 271 81% 66%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient colors */
+    --gradient-start: 222 47% 5%;
+    --gradient-mid: 243 75% 15%;
+    --gradient-end: 271 81% 10%;
+
+    /* Glow colors */
+    --glow-primary: 271 81% 66%;
+    --glow-secondary: 217 91% 60%;
+
+    --sidebar-background: 224 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 271 81% 66%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 271 81% 66%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 224 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 271 81% 66%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 271 81% 66%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 271 81% 66%;
+    --sidebar-background: 224 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 271 81% 66%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 271 81% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-mid)) 50%, hsl(var(--gradient-end)) 100%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .glow-box {
+    box-shadow: 0 0 30px hsl(var(--glow-primary) / 0.3);
+  }
+
+  .glow-box-secondary {
+    box-shadow: 0 0 30px hsl(var(--glow-secondary) / 0.3);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
