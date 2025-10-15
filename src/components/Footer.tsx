@@ -16,9 +16,7 @@ const Footer = () => {
           className="text-center"
         >
           <p className="text-muted-foreground flex items-center justify-center gap-2 flex-wrap">
-            © {new Date().getFullYear()} Ajinkyasingh Rajput. Made with{" "}
-            <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" />{" "}
-            and <span className="gradient-text font-semibold">AI</span>
+            © {new Date().getFullYear()} Ajinkyasingh Rajput
           </p>
           <motion.div
             initial={{ width: 0 }}
